@@ -189,7 +189,6 @@ next_month_ele.addEventListener("click", goToNextMonth);
 prev_month_ele.addEventListener("click", goToPrevMonth);
 
 function toggleDatePicker() {
-//   dates_ele.style.display = dates_ele.style.display === "none" ? "block" : "none";
   dates_ele.style.display = dates_ele.style.display === "none" ? "block" : "none";
 }
 
@@ -201,8 +200,7 @@ function goToNextMonth() {
   }
   month_ele.textContent = months[month] + " " + year;
   populateDates();
-//   dates_ele.style.display = "block";
-    toggleDatePicker();
+  toggleDatePicker();
 }
 
 function goToPrevMonth() {
@@ -213,8 +211,7 @@ function goToPrevMonth() {
   }
   month_ele.textContent = months[month] + " " + year;
   populateDates();
-//   dates_ele.style.display = "block";
-    toggleDatePicker();
+  toggleDatePicker();
 }
 
 function populateDates() {
