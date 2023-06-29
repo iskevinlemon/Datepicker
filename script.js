@@ -1,5 +1,4 @@
-document.getElementById("my-datepicker").innerHTML=
-`
+document.getElementById("my-datepicker").innerHTML = `
 <div class="date-picker-wrapper">
   <input type="text" class="selected-date" readonly>
   <div class="dates-container">
@@ -22,13 +21,13 @@ document.getElementById("my-datepicker").innerHTML=
       <span>Sat</span>
     </div>
     <div class="days-container"></div>
+    <button class="date-picker-toggle-btn 
+    date-picker-toggle-btn-is-ok">Ok</button>
   </div>
 </div>
-`
-;
+`;
 
-document.body.innerHTML+=
-`
+document.body.innerHTML += `
 <style>
 .date-picker-wrapper {
   position: relative;
@@ -59,7 +58,7 @@ document.body.innerHTML+=
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 10px;
-  height: 280px;
+  height: 300px;
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
@@ -135,6 +134,10 @@ document.body.innerHTML+=
   cursor: pointer;
 }
 
+.date-picker-toggle-btn-is-ok{
+  float: right;
+}
+
 .date-picker-toggle-btn:hover {
   text-decoration: underline;
 }
@@ -189,7 +192,8 @@ next_month_ele.addEventListener("click", goToNextMonth);
 prev_month_ele.addEventListener("click", goToPrevMonth);
 
 function toggleDatePicker() {
-  dates_ele.style.display = dates_ele.style.display === "none" ? "block" : "none";
+  dates_ele.style.display =
+    dates_ele.style.display === "none" ? "block" : "none";
 }
 
 function goToNextMonth() {
@@ -266,7 +270,6 @@ function populateDates() {
     days_ele.appendChild(day_element);
   }
 }
-
 
 function formatDate(selectedDate) {
   let day = selectedDate.getDate();
